@@ -15,7 +15,7 @@ services:
     image: slava010/kittygram_backend/
     env_file: .env
     volumes:
-      - static:/static_backend
+      - static:/backend_static
       - media:/media
     depends_on:
       - db
