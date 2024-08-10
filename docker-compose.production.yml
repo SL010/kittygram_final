@@ -16,7 +16,7 @@ services:
     env_file: .env
     volumes:
       - static:/backend_static
-      - media:/media
+      - media:/app/media # app - созданная директория в Dockerfile backenda; media из settings.py
     depends_on:
       - db
   frontend:
@@ -32,4 +32,5 @@ services:
       - 9000:80
     volumes:
       - static:/staticfiles/
-      #- media:/staticfiles/
+      - media:/staticfiles/media/cats/images
+      # - media:/media # директорую указать как в конфиге Nginx при настройке location
