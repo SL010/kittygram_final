@@ -32,4 +32,6 @@ services:
       - 9000:80
     volumes:
       - static:/staticfiles/
-      - media:/staticfiles/media/cats/images
+      - media:/cats
+    depends_on:
+      - backend
