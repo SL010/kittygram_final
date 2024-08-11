@@ -32,7 +32,6 @@ services:
       - 9000:80
     volumes:
       - static:/staticfiles/
-      # - media:/staticfiles/media/cats/images
-      - media:/cats # директорую указать как в конфиге Nginx при настройке location
+      - media:/staticfiles/media # директорую указать как в конфиге Nginx при настройке location
     depends_on:
       - backend
